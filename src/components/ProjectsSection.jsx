@@ -37,18 +37,18 @@ export const ProjectsSection = () => {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="bg-card border border-border rounded-xl p-6 shadow-sm hover:-translate-y-1 transition-transform duration-300"
+              className="bg-card border border-border rounded-xl p-4 shadow-sm hover:-translate-y-1 transition-transform duration-300 flex flex-col h-full min-h-[360px] justify-between"
             >
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-semibold">{project.title}</h3>
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="text-xl font-semibold tracking-tight">{project.title}</h3>
                 <span className="text-xs font-medium px-2 py-1 rounded-full bg-primary/10 text-primary">
                   {project.status}
                 </span>
               </div>
 
-              <p className="text-muted-foreground mb-4 min-h-[72px]">{project.description}</p>
+              <p className="text-left text-muted-foreground mb-1 min-h-[64px] leading-relaxed">{project.description}</p>
 
-              <div className="flex flex-wrap gap-2 mb-5">
+              <div className="flex flex-wrap gap-1 mb-2">
                 {project.stack.map((item) => (
                   <span
                     key={item}
@@ -59,12 +59,12 @@ export const ProjectsSection = () => {
                 ))}
               </div>
 
-              <div className="flex gap-3">
+              <div className="mt-1 flex items-stretch gap-2">
                 <a
                   href={project.repo}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex-1 text-center px-4 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors"
+                  className="flex-1 min-h-[42px] flex items-center justify-center text-center px-3 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors"
                 >
                   GitHub
                 </a>
@@ -74,12 +74,12 @@ export const ProjectsSection = () => {
                     href={project.demo}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex-1 text-center px-4 py-2 rounded-full bg-primary text-primary-foreground hover:opacity-90 transition-colors"
+                    className="flex-1 min-h-[42px] flex items-center justify-center text-center px-3 py-2 rounded-full bg-primary text-primary-foreground hover:opacity-90 transition-colors"
                   >
                     Live Demo
                   </a>
                 ) : (
-                  <span className="flex-1 text-center px-4 py-2 rounded-full bg-secondary text-muted-foreground">
+                  <span className="flex-1 min-h-[42px] flex items-center justify-center text-center px-3 py-2 rounded-full bg-secondary text-muted-foreground">
                     Demo Soon
                   </span>
                 )}
