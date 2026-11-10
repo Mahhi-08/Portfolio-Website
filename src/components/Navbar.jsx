@@ -49,7 +49,7 @@ export const Navbar = () =>{
 
      {/* mobile version */}
 
-    <button onClick={() => setIsMenuOpen((prev)=> !prev)} className="md:hidden p-2 text-foreground z-50" aria-label={isMenuOpen ? "CloseMenu" : "OpenMenu"}> {isMenuOpen ? <X size={24} /> : <Menu size={24} /> }</button>
+    <button onClick={() => setIsMenuOpen((prev)=> !prev)} className="md:hidden fixed right-12 top-4 z-[60] p-2 text-foreground bg-card/80 border border-border rounded-full shadow-sm" aria-label={isMenuOpen ? "CloseMenu" : "OpenMenu"}> {isMenuOpen ? <X size={24} /> : <Menu size={24} /> }</button>
 
      <div className={cn("fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center","transition-all duration-300 md:hidden", isMenuOpen ? "opacity-100 pointer-events-auto": "opacity-0 pointer-events-none")}>
      <div className="flex flex-col space-y-8 text-xl">

@@ -32,8 +32,10 @@ export const ThemeToggle = () => {
 
     // here using tailwind css is given to the buttons and using js the button changes the color
     return <button onClick={toggleTheme} 
-    className={cn("fixed top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
-    "focus:outline-none" )}>
-         {isDarkMode ? <Sun className="h-6 w-6 text-yellow-300" /> : <Moon className="h-6 w-6 text-blue-900" />}
+    className={cn(
+        "fixed top-5 right-3 z-50 p-2.5 rounded-full border border-border bg-card/80 backdrop-blur-sm shadow-sm transition-all duration-300 hover:scale-105 md:right-5",
+        "focus:outline-none"
+    )}>
+         {isDarkMode ? <Sun className="h-5 w-5 text-yellow-300" /> : <Moon className="h-5 w-5 text-blue-900" />}
     </button>
 };
